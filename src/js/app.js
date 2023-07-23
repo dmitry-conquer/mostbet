@@ -3,6 +3,7 @@
 // import { initSpoiler, initDdropdown } from './modules/spoilers.js';
 // import { initTabs } from './modules/tabs.js';
 import { initSliders } from './modules/sliders.js';
+import { sorting } from './modules/sorting.js';
 // import { initHeader } from './modules/header.js';
 // import { initModals, openModalIf } from './modules/modals.js';
 // import { useDynamicAdapt } from './modules/dynamicAdapt.js';
@@ -19,6 +20,7 @@ import { initSliders } from './modules/sliders.js';
 
 function app() {
   initSliders();
+  sorting();
 }
 
 document.addEventListener('DOMContentLoaded', app);
