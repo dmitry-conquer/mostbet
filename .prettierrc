@@ -7,11 +7,11 @@
   "printWidth": 120,
   "quoteProps": "as-needed",
   "semi": true,
-  "singleQuote": false,
+  "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
   "jsxBracketSameLine": true,
   "jsxSingleQuote": false,
-  "singleAttributePerLine": true
+  "singleAttributePerLine": false
 }
 

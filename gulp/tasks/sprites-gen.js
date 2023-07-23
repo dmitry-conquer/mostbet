@@ -21,9 +21,9 @@ export const spritesGen = () => {
       .pipe(
          gulpCheerio({
             run: function ($) {
-               $("[fill]").removeAttr("fill");
-               $("[stroke]").removeAttr("stroke");
-               $("[style]").removeAttr("style");
+               // $("[fill]").removeAttr("fill");
+               // $("[stroke]").removeAttr("stroke");
+               // $("[style]").removeAttr("style");
             },
             parserOptions: {
                xmlMode: true,
