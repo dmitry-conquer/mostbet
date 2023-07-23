@@ -28,7 +28,10 @@ body {
 }
 
 .main {
-  padding-top: 120px;
+  padding-top: 110px;
+  @media (max-width: ($lg-md)) {
+    padding-top: 70px;
+  }
 }
 
 .container {
@@ -88,17 +91,32 @@ svg {
   z-index: 999;
   width: 100%;
   min-height: 120px;
+  @media (max-width: ($lg-md)) {
+    min-height: 90px;
+  }
   padding: 15px 20px;
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    @media (min-width: ($lg-md)) {
+      margin-bottom: 20px;
+    }
+    gap: 25px;
+    align-items: center;
+    @media (max-width: ($lg-md)) {
+      justify-content: start;
+    }
   }
   &__actions {
   }
   &__auth {
     display: flex;
-    gap: 20px;
+    gap: 10px 20px;
+    @media (max-width: ($lg)) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+    }
   }
   &__bottom {
     display: flex;
@@ -106,6 +124,31 @@ svg {
     gap: 25px;
   }
   &__logo {
+  }
+  &__logo-full {
+    display: block;
+    @media (max-width: ($lg-md)) {
+      display: none;
+    }
+  }
+  &__logo-only {
+    display: none;
+    @media (max-width: ($lg-md)) {
+      display: block;
+    }
+  }
+
+  &__menu-icon {
+    display: none;
+    margin-left: auto;
+    @media (max-width: ($lg)) {
+      display: block;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      color: #fff;
+    }
   }
 }
 .actions-header {
@@ -144,12 +187,32 @@ svg {
 }
 .nav-header {
   width: 100%;
+  background-color: #00316680;
+  border-radius: 20px;
+  @media (max-width: ($lg)) {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: #003266;
+    width: 320px;
+    padding: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &._active {
+      opacity: 1;
+      visibility: visible;
+      top: 70px;
+    }
+  }
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00316680;
-    border-radius: 20px;
+    @media (max-width: ($lg)) {
+      flex-direction: column;
+    }
   }
 
   &__link {
@@ -254,9 +317,9 @@ svg {
     margin-bottom: 10px;
     &_bottom {
       background: #fff;
-      .sidebar__item {
-      }
       .sidebar__link {
+        border-bottom: 2px solid #e8ecf1;
+
         span {
           color: #000;
         }
@@ -265,8 +328,6 @@ svg {
         }
       }
     }
-  }
-  &__item {
   }
   &__link {
     cursor: pointer;
@@ -396,13 +457,19 @@ svg {
 */
 
 .hero {
+  // padding-left: 280px;
   &__slider {
   }
 }
 .slider-hero {
   width: 100%;
+  padding: 20px 0;
+  @media (max-width: ($lg)) {
+    height: 300px;
+  }
   &__wrapper {
     display: flex;
+    height: 100%;
   }
   &__pagination {
     display: flex;
@@ -426,7 +493,6 @@ svg {
   height: 100%;
   flex-shrink: 0;
   &__image {
-    object-fit: contain;
   }
 }
 
