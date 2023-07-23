@@ -1,0 +1,46 @@
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #003266;
+  &__caption {
+    cursor: pointer;
+    align-items: center;
+    color: #fff;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    &_popular {
+      color: #428cdc;
+    }
+  }
+  &__base {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &__select {
+  }
+  &__trigger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #003266;
+    padding: 3px 7px;
+    border-radius: 10px;
+    color: #428cdc;
+    text-transform: uppercase;
+    font-weight: 500;
+    gap: 10px;
+  }
+  &__drop-down {
+    display: none;
+  }
+  &__list {
+  }
+  &__item {
+  }
+}
