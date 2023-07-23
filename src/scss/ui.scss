@@ -4,12 +4,13 @@
   font-size: 14px;
   font-weight: 500;
   max-width: max-content;
+  height: 40px;
   align-items: center;
   padding: 0 20px;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
-  justify-content: space-between;
+  justify-content: center;
   color: #fff;
   font-size: 18px;
   gap: 10px;
@@ -26,7 +27,7 @@
     padding: 0 10px;
     font-size: 14px;
     font-weight: 600;
-  } 
+  }
 }
 
 // sprites

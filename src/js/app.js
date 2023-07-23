@@ -2,7 +2,7 @@
 // import { hasErrors } from './modules/forms.js';
 // import { initSpoiler, initDdropdown } from './modules/spoilers.js';
 // import { initTabs } from './modules/tabs.js';
-// import { initSliders } from './modules/sliders.js';
+import { initSliders } from './modules/sliders.js';
 // import { initHeader } from './modules/header.js';
 // import { initModals, openModalIf } from './modules/modals.js';
 // import { useDynamicAdapt } from './modules/dynamicAdapt.js';
@@ -18,8 +18,7 @@
 // import MicroModal from 'micromodal';
 
 function app() {
-  // - - - - - - - [app {START}] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  // - - - - - - - [app {END}] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  initSliders();
 }
 
 document.addEventListener('DOMContentLoaded', app);
