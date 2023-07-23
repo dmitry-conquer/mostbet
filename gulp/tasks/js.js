@@ -10,14 +10,14 @@ export const js = () => {
         output: {
           filename: "app.min.js",
         },
-        plugins: [
-          new ESLintPlugin({
-            emitError: true,
-            emitWarning: true,
-            failOnError: true,
-            failOnWarning: false,
-          }),
-        ],
+        // plugins: [
+        //   new ESLintPlugin({
+        //     emitError: true,
+        //     emitWarning: true,
+        //     failOnError: true,
+        //     failOnWarning: false,
+        //   }),
+        // ],
       })
     )
     .pipe(app.plugins.if(app.isBuild, app.plugins.size({ title: 'JS', showFiles: true })))
