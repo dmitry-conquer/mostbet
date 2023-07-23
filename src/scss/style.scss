@@ -426,18 +426,38 @@ svg {
 .games {
 }
 .group-games {
-  &__title {
-  }
   &__slider {
   }
 }
 .slider-games {
   width: 100%;
   overflow: hidden;
-  height: 178px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 20px;
+    svg {
+      width: 44px;
+      height: 50px;
+    }
+    span {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+  }
   &__wrapper {
     display: flex;
-    height: 100%;
+    // height: 100%;
+  height: 178px;
+
   }
   &__slide {
     flex-shrink: 0;
@@ -487,7 +507,7 @@ svg {
     height: 100%;
     left: 0;
     top: 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   &__lables {
     padding: 10px;
@@ -539,7 +559,7 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     svg {
       width: 35px;
       height: 35px;

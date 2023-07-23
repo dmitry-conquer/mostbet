@@ -29,7 +29,10 @@ export function initSliders() {
       spaceBetween: 20,
       speed: 1200,
       // loop: true,
-      navigation: {},
+      navigation: {
+        prevEl: '.slider-button_prev',
+        nextEl: '.slider-button_next',
+      },
     });
   }
 }
