@@ -139,30 +139,29 @@ svg {
     gap: 25px;
   }
   &__logo {
+    min-width: 150px;
     @media (max-width: ($sm)) {
       margin-right: auto;
+      min-width: auto;
     }
-    @media (max-width: ($sm2)) {
-      max-width: 200px;
-    }
+  
   }
   &__logo-full {
     width: 100%;
     display: block;
-    @media (max-width: $lg-md), (max-width: $sm) {
+    @media (max-width: ($sm)) {
       display: none;
     }
-
-    @media (max-width: $lg), (max-width: $sm2) {
+    @media (max-width: ($sm2)) {
       display: block;
     }
   }
   &__logo-only {
     display: none;
-    @media (max-width: $lg-md), (max-width: $sm) {
+    @media (max-width: ($sm)) {
       display: block;
     }
-    @media (max-width: $lg), (max-width: $sm2) {
+    @media (max-width: ($sm2)) {
       display: none;
     }
   }
@@ -281,7 +280,6 @@ svg {
     top: 0;
     right: 0;
     border-radius: 0;
-
   }
   &__close {
     position: absolute;
@@ -543,9 +541,15 @@ svg {
   width: 100%;
   padding: 20px 0;
   margin-bottom: 30px;
-  @media (max-width: ($lg)) {
+  @media (min-width: ($sm)) {
     height: 300px;
   }
+  @media (min-width: ($lg)) {
+    height: auto;
+  }
+ 
+  @include av('height', 300, 200, 629.98, 320);
+  
   &__wrapper {
     display: flex;
     height: 100%;
@@ -556,6 +560,10 @@ svg {
     .swiper-pagination-bullet {
       width: 14px;
       height: 14px;
+      @media (max-width: ($md)) {
+        width: 10px;
+        height: 10px;
+      }
       border: 2px solid #428cdc;
       background: transparent;
       transition: all 0.3s ease;
@@ -605,7 +613,7 @@ svg {
   }
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 20px;
   }
 }
@@ -621,7 +629,6 @@ svg {
 
   &__wrapper {
     display: flex;
-    // height: 100%;
     height: 178px;
   }
   &__slide {
@@ -650,7 +657,7 @@ svg {
     flex-wrap: wrap;
     gap: 20px 40px;
     @media (max-width: ($sm)) {
-       justify-content: center;
+      justify-content: center;
     }
   }
   &__age-limit {
@@ -699,10 +706,10 @@ svg {
       flex-direction: column;
       gap: 15px 0;
       align-items: start;
-   }
-   @media (max-width: ($sm)) {
-    align-items: center;
-   }
+    }
+    @media (max-width: ($sm)) {
+      align-items: center;
+    }
   }
   &__column {
     display: flex;
@@ -731,7 +738,7 @@ svg {
   &__provider {
     height: 27px;
     @media (max-width: ($md)) {
-       height: 20px;
+      height: 20px;
     }
   }
 }

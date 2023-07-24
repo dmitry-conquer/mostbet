@@ -3,13 +3,13 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px 50px;
+  gap: 50px;
   padding-bottom: 25px;
   margin-bottom: 25px;
   border-bottom: 2px solid #003266;
   &__open-bar {
     @media (min-width: ($md)) {
-       display: none;
+      display: none;
     }
   }
   &__caption {
@@ -51,7 +51,10 @@
     }
   }
   &__drop-down {
-    padding: 20px 0;
+    padding: 20px;
+    @media (max-width: ($sm2)) {
+      padding: 20px 10px;
+    }
     position: absolute;
     left: 0;
     opacity: 0;
@@ -62,7 +65,7 @@
     max-width: 1040px;
     overflow: hidden;
     top: calc(100% - 10px);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     width: 100%;
     z-index: 3;
     color: #fff;
@@ -73,17 +76,24 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(6, 20%);
+    grid-template-columns: repeat(5, 20%);
     gap: 15px 0;
+    @media (max-width: ($lg)) {
+      grid-template-columns: repeat(4, 25%);
+    }
+    @media (max-width: ($sm)) {
+      grid-template-columns: repeat(3, 33.333%);
+    }
+    @media (max-width: ($sm2)) {
+      grid-template-columns: repeat(2, 50%);
+    }
   }
 }
 
 .item-sort {
   overflow: hidden;
   padding: 0 15px;
-
   &__label {
-    width: calc(100% - 30px);
     & > input:checked + span {
       &::before {
         background-color: #fff;

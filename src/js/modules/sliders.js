@@ -25,7 +25,7 @@ export function initSliders() {
       modules: [Navigation],
       wrapperClass: 'slider-games__wrapper',
       slideClass: 'slider-games__slide',
-      slidesPerView: 2,
+      slidesPerView: 1.3,
       spaceBetween: 20,
       speed: 1200,
       // loop: true,
@@ -34,6 +34,9 @@ export function initSliders() {
         nextEl: '.slider-button_next',
       },
       breakpoints: {
+        420: {
+          slidesPerView: 2,
+        },
         768: {
           slidesPerView: 2.8,
         },
