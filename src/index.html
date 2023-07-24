@@ -5,7 +5,7 @@
     <div class="wrapper">
       @@include('partials/header.html', { })
       <main class="main">
-        @@include('partials/sidebar.html', { })
+        @@include('partials/sidebar-games.html', { })
         <section class="hero">
           <div class="hero__slider slider-hero">
             <div class="slider-hero__wrapper">
@@ -28,7 +28,7 @@
             <div class="slider-hero__pagination"></div>
           </div>
         </section>
-        <div class="container">
+        <div class="container container_left">
           <section class="games">
             <div class="sidebar-row"></div>
             @@include('partials/sort.html', { })
@@ -116,7 +116,7 @@
           </section>
         </div>
       </main>
-      @@include('partials/footer.html', { })
+      @@include('partials/footer-left.html', { })
     </div>
     <script type="module" src="./js/app.min.js"></script>
   </body>
