@@ -19,7 +19,8 @@
 }
 
 .icon-simple-arrow {
-  fill: #fff;
-  width: 10px;
-  height: 10px;
+  fill: #fff !important ;
+  width: 10px !important  ;
+  height: 10px !important ;
+  transition: all .3s ease;
 }

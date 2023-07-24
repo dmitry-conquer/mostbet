@@ -123,6 +123,7 @@ svg {
   @media (max-width: ($md)) {
     display: none;
   }
+
   &_sport {
     .sidebar__inner {
       background: #003266;
@@ -139,6 +140,11 @@ svg {
       }
       span {
         line-height: 35px;
+        @media (any-hover: hover) {
+          &:hover {
+            color: #fa8100;
+          }
+        }
       }
     }
   }
@@ -157,17 +163,38 @@ svg {
   }
   &__list {
     border-radius: 15px;
-    margin-bottom: 10px;
     @media (max-width: ($md)) {
       display: flex;
+    }
+    &_sub {
+      overflow: hidden;
+      max-height: 0;
+      transition: all .3s ease;
     }
     &_bottom {
       @media (min-width: ($md)) {
         background: #fff;
         .sidebar__item {
           &:not(:last-child) {
-            .sidebar__link {
-              border-bottom: 2px solid #e8ecf1;
+            border-bottom: 2px solid #e8ecf1;
+          }
+          &_sub {
+            background: #e8ecf1;
+            &:not(:last-child) {
+              border-bottom: 1px solid #fff;
+            }
+            width: 240px;
+            display: flex;
+            justify-content: space-between;
+            .sidebar__sub-item {
+              font-size: 12px;
+              text-transform: capitalize;
+              display: block;
+              margin-right: auto;
+            }
+            .sidebar__count {
+              font-size: 12px;
+              color: #adb6c1;
             }
           }
         }
@@ -182,14 +209,25 @@ svg {
       }
     }
   }
+
   &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
     &:not(:last-child) {
-      .sidebar__link {
-        border-bottom: 2px solid #043e7d;
-      }
+      border-bottom: 2px solid #043e7d;
     }
   }
+  &__current-time {
+    color: #1183d3 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    display: block;
+    margin-left: 40px;
+  }
   &__link {
+    width: 100%;
     cursor: pointer;
     @media (min-width: ($md)) {
     }
@@ -201,12 +239,16 @@ svg {
       flex-direction: column;
       align-items: center;
     }
+    &._active-spoiler {
+      .icon-simple-arrow {
+        transform: rotate(-180deg);
+      }
+    }
     svg {
       fill: #1183d3;
       width: 40px;
       height: 40px;
     }
-
     span {
       font-size: 16px;
       font-weight: 500;
@@ -219,15 +261,48 @@ svg {
       text-transform: uppercase;
       color: #fff;
       transition: all 0.3s ease;
-
       @media (any-hover: hover) {
         &:hover {
           color: #1181d0;
         }
       }
+      &._active {
+        color: #fa4d00;
+      }
     }
+
     &_active > span {
       color: #ffba00;
+    }
+  }
+  &__count {
+    font-size: 10px;
+    text-transform: capitalize;
+  }
+}
+.drop-down-sidebar {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  max-height: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  &__item {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 1em;
+    color: #054588;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 3px 8px;
+    text-align: center;
+    &._active {
+      background: #fa8100;
+      color: #fff;
     }
   }
 }

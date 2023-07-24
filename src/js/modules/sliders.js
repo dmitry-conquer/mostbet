@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
-export function initSliders() {
+export function useSliders() {
   if (document.querySelector('.slider-hero')) {
     new Swiper('.slider-hero', {
       modules: [Pagination, Autoplay],
