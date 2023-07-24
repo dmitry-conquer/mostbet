@@ -19,6 +19,21 @@ export function useSliders() {
       },
     });
   }
+  if (document.querySelector('.slider-home')) {
+    new Swiper('.slider-home', {
+      modules: [Pagination, Autoplay],
+      wrapperClass: 'slider-home__wrapper',
+      slideClass: 'slide-home',
+      slidesPerView: 'auto',
+      spaceBetween: -300,
+      speed: 1200,
+      loop: true,
+      // loopedSlides: 5,
+      autoplay: {
+        delay: 3000,
+      },
+    });
+  }
 
   const gamesSliders = document.querySelectorAll('.slider-games');
   if (document.querySelector('.slider-games')) {
