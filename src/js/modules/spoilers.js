@@ -14,7 +14,6 @@ const spoilers = {
     spoilerTrigger.classList.toggle('_active-spoiler');
     const spoilerContent = spoilerTrigger.nextElementSibling;
     spoilerContent.classList.toggle('_active-spoiler-content');
-    spoilerContent.style.maxHeight = spoilerContent.style.maxHeight ? null : `${spoilerContent.scrollHeight}px`;
   },
 };
 

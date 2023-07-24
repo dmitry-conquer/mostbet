@@ -55,3 +55,15 @@
     transform: rotate(-90deg);
   }
 }
+
+
+.icon-link {
+  cursor: pointer;
+  fill: #1183d3;
+    transition: opacity .3s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+}

@@ -1,7 +1,3 @@
-/*
-  home slider
-*/
-
 .slider-home {
   overflow: hidden;
   width: auto;
@@ -11,9 +7,6 @@
   @media (min-width: ($sm)) {
     height: 350px;
   }
-//   @media (min-width: ($lg)) {
-//     height: auto;
-//   }
 
   &__wrapper {
     display: flex;

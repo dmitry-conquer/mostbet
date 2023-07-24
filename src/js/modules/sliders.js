@@ -19,7 +19,6 @@ export function useSliders() {
       },
     });
   }
- 
 
   const gamesSliders = document.querySelectorAll('.slider-games');
   if (document.querySelector('.slider-games')) {
@@ -41,6 +40,77 @@ export function useSliders() {
             spaceBetween: 20,
           },
           768: {
+            slidesPerView: 3,
+          },
+          1115: {
+            slidesPerView: 4,
+          },
+          1320: {
+            slidesPerView: 5,
+          },
+          1535: {
+            slidesPerView: 6,
+          },
+          1742: {
+            slidesPerView: 7,
+          },
+        },
+      });
+    });
+  }
+
+
+  const cardsSliders = document.querySelectorAll('.slider-card');
+  if (document.querySelector('.slider-card')) {
+    cardsSliders.forEach(slider => {
+      new Swiper(slider, {
+        modules: [Navigation],
+        wrapperClass: 'slider-card__wrapper',
+        slideClass: 'slider-card__slide',
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        speed: 1200,
+        loop: true,
+        navigation: {
+          prevEl: slider.querySelector('.slider-button_prev'),
+          nextEl: slider.querySelector('.slider-button_next'),
+        },
+        breakpoints: {
+          557: {
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 2,
+          },
+          1350: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    });
+  }
+
+
+  const groupSliders = document.querySelectorAll('.slider-group');
+  if (document.querySelector('.slider-group')) {
+    groupSliders.forEach(slider => {
+      new Swiper(slider, {
+        modules: [Navigation],
+        wrapperClass: 'slider-group__wrapper',
+        slideClass: 'slider-group__slide',
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        speed: 1200,
+        // loop: true,
+        navigation: {
+          prevEl: slider.querySelector('.slider-button_prev'),
+          nextEl: slider.querySelector('.slider-button_next'),
+        },
+        breakpoints: {
+          420: {
+            slidesPerView: 2,
+          },
+          630: {
             slidesPerView: 3,
           },
           1115: {

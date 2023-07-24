@@ -1,7 +1,5 @@
 import { useSpoiler } from './modules/spoilers.js';
-// import { initTabs } from './modules/tabs.js';
 import { useSliders } from './modules/sliders.js';
-import { sorting } from './modules/sorting.js';
 import { useDynamicAdapt } from './modules/dynamicAdapt.js';
 
 function app() {
