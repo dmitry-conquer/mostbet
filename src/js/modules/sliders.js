@@ -19,21 +19,7 @@ export function useSliders() {
       },
     });
   }
-  if (document.querySelector('.slider-home')) {
-    new Swiper('.slider-home', {
-      modules: [Pagination, Autoplay],
-      wrapperClass: 'slider-home__wrapper',
-      slideClass: 'slide-home',
-      slidesPerView: 'auto',
-      spaceBetween: -300,
-      speed: 1200,
-      loop: true,
-      // loopedSlides: 5,
-      autoplay: {
-        delay: 3000,
-      },
-    });
-  }
+ 
 
   const gamesSliders = document.querySelectorAll('.slider-games');
   if (document.querySelector('.slider-games')) {
@@ -42,8 +28,8 @@ export function useSliders() {
         modules: [Navigation],
         wrapperClass: 'slider-games__wrapper',
         slideClass: 'slider-games__slide',
-        slidesPerView: 1.3,
-        spaceBetween: 20,
+        slidesPerView: 2.3,
+        spaceBetween: 10,
         speed: 1200,
         // loop: true,
         navigation: {
@@ -52,22 +38,22 @@ export function useSliders() {
         },
         breakpoints: {
           420: {
-            slidesPerView: 2,
+            spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2.8,
-          },
-          876: {
             slidesPerView: 3,
           },
-          1100: {
+          1115: {
             slidesPerView: 4,
           },
-          1350: {
+          1320: {
             slidesPerView: 5,
           },
-          1530: {
+          1535: {
             slidesPerView: 6,
+          },
+          1742: {
+            slidesPerView: 7,
           },
         },
       });

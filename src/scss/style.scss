@@ -1,21 +1,13 @@
-/* Import lib styles  */
 @import '../../node_modules/swiper/swiper.scss';
 @import '../../node_modules/swiper/modules/navigation/navigation.scss';
 @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
-// @import '../../node_modules/swiper/modules/effect-coverflow/effect-coverflow.scss';
 @import '../../node_modules/swiper/modules/pagination/pagination.scss';
-// @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
-// @import '../../node_modules/nouislider/dist/nouislider.min';
-// @import '../../node_modules/aos/src/sass/aos.scss';
-// @import '../../node_modules/choices.js/src/styles/choices.scss';
-// "./lib/tips";
 
 /* prettier-ignore */
 @import "fonts",
         "normalize";
 /* prettier-ignore */
-@import "./utils/functions",
-        "./utils/variables",
+@import "./utils/variables",
         "./utils/mixins",
         "./ui/buttons",
         "./ui/sprites";
@@ -58,13 +50,6 @@ body {
       padding-left: 15px;
     }
   }
-  &_both {
-    padding-right: 280px;
-    padding-left: 280px;
-    @media (max-width: ($md)) {
-      padding-left: 15px;
-    }
-  }
 }
 
 ._imw {
@@ -95,7 +80,6 @@ body {
   overflow: hidden;
   min-height: 100%;
   background: #002347;
-
   main {
     flex: 1 1 auto;
   }
@@ -107,18 +91,7 @@ svg {
 }
 
 // >> - - - - - - - - - - - - - [current project styles] - - - - - - - - - - - - - - - - -
-
-/*
-  hero
-*/
-
 .hero {
-  &_home {
-    margin-top: 20px;
-    padding: 0 280px;
-    border-radius: 15px;
-    overflow: hidden;
-  }
 }
 
 /*
@@ -138,30 +111,6 @@ svg {
     display: none;
   }
 
-  &_sport {
-    .sidebar__inner {
-      background: #003266;
-      border-radius: 15px;
-    }
-    .sidebar__top {
-      background-image: none;
-      margin-bottom: 0;
-    }
-    .sidebar__link {
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-      span {
-        line-height: 35px;
-        @media (any-hover: hover) {
-          &:hover {
-            color: #fa8100;
-          }
-        }
-      }
-    }
-  }
   &__inner {
     overflow-y: auto;
     padding-bottom: 130px;
@@ -180,36 +129,12 @@ svg {
     @media (max-width: ($md)) {
       display: flex;
     }
-    &_sub {
-      overflow: hidden;
-      max-height: 0;
-      transition: all .3s ease;
-    }
     &_bottom {
       @media (min-width: ($md)) {
         background: #fff;
         .sidebar__item {
           &:not(:last-child) {
             border-bottom: 2px solid #e8ecf1;
-          }
-          &_sub {
-            background: #e8ecf1;
-            &:not(:last-child) {
-              border-bottom: 1px solid #fff;
-            }
-            width: 240px;
-            display: flex;
-            justify-content: space-between;
-            .sidebar__sub-item {
-              font-size: 12px;
-              text-transform: capitalize;
-              display: block;
-              margin-right: auto;
-            }
-            .sidebar__count {
-              font-size: 12px;
-              color: #adb6c1;
-            }
           }
         }
         .sidebar__link {
@@ -223,7 +148,6 @@ svg {
       }
     }
   }
-
   &__item {
     display: flex;
     flex-wrap: wrap;
@@ -232,13 +156,6 @@ svg {
     &:not(:last-child) {
       border-bottom: 2px solid #043e7d;
     }
-  }
-  &__current-time {
-    color: #1183d3 !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    display: block;
-    margin-left: 40px;
   }
   &__link {
     width: 100%;
@@ -284,39 +201,8 @@ svg {
         color: #fa4d00;
       }
     }
-
     &_active > span {
       color: #ffba00;
-    }
-  }
-  &__count {
-    font-size: 10px;
-    text-transform: capitalize;
-  }
-}
-.drop-down-sidebar {
-  margin-top: 3px;
-  margin-bottom: 10px;
-  max-height: 0;
-  transition: all 0.3s ease;
-  width: 100%;
-  overflow: hidden;
-  padding: 0 20px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  &__item {
-    cursor: pointer;
-    background-color: #fff;
-    border-radius: 1em;
-    color: #054588;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 3px 8px;
-    text-align: center;
-    &._active {
-      background: #fa8100;
-      color: #fff;
     }
   }
 }
@@ -329,7 +215,6 @@ svg {
 .sidebar-search {
   height: 40px;
   padding: 0 15px;
-
   &__inner {
     display: flex;
     align-items: center;
@@ -429,23 +314,21 @@ svg {
 /*
   games
 */
-.group-games {
-  margin-bottom: 20px;
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+
+.games-header {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 15px 0;
   &__title {
     display: flex;
     align-items: center;
     gap: 0 10px;
-    svg {
+    margin-right: auto;
+    .games-header__icon {
       width: 44px;
       height: 50px;
     }
-    span {
+    .games-header__text {
       color: #fff;
       font-size: 18px;
       font-weight: 500;
@@ -453,45 +336,54 @@ svg {
       text-transform: uppercase;
     }
   }
+  &__nav {
+    display: flex;
+    gap: 0 10px;
+    @media (max-width: ($sm2)) {
+      display: none;
+    }
+  }
+}
+.grid-games {
+  margin-bottom: 20px;
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 20px;
+    @media (max-width: ($sm2)) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+}
+.show-more {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+  height: 40px;
+  background-color: #003266;
+  border-radius: 20px;
+  margin-left: 20px;
+  padding: 0 15px;
+  transition: all 0.3s ease;
+  span {
+    color: #fff;
+    font-weight: 500;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 .slider-games {
   width: 100%;
   overflow: hidden;
-
-  &__nav {
-    display: flex;
-    gap: 0 10px;
-  }
-
   &__wrapper {
     display: flex;
-    height: 178px;
   }
   &__slide {
     flex-shrink: 0;
-  }
-}
-
-/*
-  single
-*/
-
-.single-inner {
-  padding: 20px;
-  &__title {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 36px;
-    margin-bottom: 1.2em;
-  }
-  &__content {
-    text-align: center;
-    color: white;
   }
 }

@@ -13,19 +13,6 @@
   }
 }
 
-// - - - - - - - [Підключення шрифтів] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-@mixin font($font-name, $file-name, $weight, $style) {
-  @font-face {
-    src: url('../fonts/#{$file-name}.woff2') format('woff2');
-    font-family: $font-name;
-    font-weight: #{$weight};
-    font-style: #{$style};
-    font-display: swap;
-  }
-}
-
-// - - - - - - - [Custom Scroll] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 @mixin scroll($bg) {
    * {
       scrollbar-width: thin;

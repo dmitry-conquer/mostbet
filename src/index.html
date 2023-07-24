@@ -5,112 +5,105 @@
     <div class="wrapper">
       @@include('partials/header.html', { })
       <main class="main">
-        @@include('partials/sidebar-games.html', { })
-        <section class="hero">
-          <div class="hero__slider slider-hero">
-            <div class="slider-hero__wrapper">
-              <div class="slider-hero__slide slide-hero">
-                <span class="_imw">
-                  <img class="slide-hero__image" src="./img/hero-slide1.webp" alt="hero-slide1" />
-                </span>
-              </div>
-              <div class="slider-hero__slide slide-hero">
-                <span class="_imw">
-                  <img class="slide-hero__image" src="./img/hero-slide2.webp" alt="hero-slide2" />
-                </span>
-              </div>
-              <div class="slider-hero__slide slide-hero">
-                <span class="_imw">
-                  <img class="slide-hero__image" src="./img/hero-slide3.webp" alt="hero-slide3" />
-                </span>
-              </div>
-            </div>
-            <div class="slider-hero__pagination"></div>
-          </div>
-        </section>
+        @@include('partials/sidebar.html', { }) @@include('partials/hero.html', { })
         <div class="container container_left">
           <section class="games">
             <div class="sidebar-row"></div>
             @@include('partials/sort.html', { })
-            <div class="games__group group-games">
-              <div class="group-games__slider slider-games">
-                <div class="group-games__header">
-                  <p class="group-games__title">
-                    <svg class="icon-trophy">
-                      <use href="./sprites/sprite.svg#icon-trophy"></use>
+
+            <div class="slider-games">
+              <div class="games-header">
+                <p class="games-header__title">
+                  <svg class="games-header__icon icon-trophy">
+                    <use href="./sprites/sprite.svg#icon-trophy"></use>
+                  </svg>
+                  <span class="games-header__text">топ ігри</span>
+                </p>
+                <div class="games-header__nav">
+                  <button class="slider-button slider-button_prev" type="button">
+                    <svg class="icon-simple-arrow">
+                      <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
                     </svg>
-                    <span>топ ігри</span>
-                  </p>
-                  <div class="slider-games__nav">
-                    <button class="slider-button slider-button_prev" type="button">
-                      <svg class="icon-simple-arrow">
-                        <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
-                      </svg>
-                    </button>
-                    <button class="slider-button slider-button_next" type="button">
-                      <svg class="icon-simple-arrow">
-                        <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
-                      </svg>
-                    </button>
-                  </div>
+                  </button>
+                  <button class="slider-button slider-button_next" type="button">
+                    <svg class="icon-simple-arrow">
+                      <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
-                <div class="slider-games__wrapper">
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { })
-                </div>
+                <span class="show-more" data-code="">
+                  <span>ВСІ</span>
+                  <svg class="icon-multi-arrows">
+                    <use href="./sprites/sprite.svg#icon-multi-arrows"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="slider-games__wrapper">
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { })
               </div>
             </div>
-            <div class="games__group group-games">
-              <div class="group-games__slider slider-games">
-                <div class="group-games__header">
-                  <p class="group-games__title">
-                    <svg class="icon-show">
-                      <use href="./sprites/sprite.svg#icon-show"></use>
+
+            <div class="slider-games">
+              <div class="games-header">
+                <p class="games-header__title">
+                  <svg class="games-header__icon icon-show">
+                    <use href="./sprites/sprite.svg#icon-show"></use>
+                  </svg>
+                  <span class="games-header__text">ігрові шоу</span>
+                </p>
+                <div class="games-header__nav">
+                  <button class="slider-button slider-button_prev" type="button">
+                    <svg class="icon-simple-arrow">
+                      <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
                     </svg>
-                    <span>ігрові шоу</span>
-                  </p>
-                  <div class="slider-games__nav">
-                    <button class="slider-button slider-button_prev" type="button">
-                      <svg class="icon-simple-arrow">
-                        <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
-                      </svg>
-                    </button>
-                    <button class="slider-button slider-button_next" type="button">
-                      <svg class="icon-simple-arrow">
-                        <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
-                      </svg>
-                    </button>
-                  </div>
+                  </button>
+                  <button class="slider-button slider-button_next" type="button">
+                    <svg class="icon-simple-arrow">
+                      <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
-                <div class="slider-games__wrapper">
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { })
-                </div>
+                <span class="show-more" data-code="">
+                  <span>ВСІ</span>
+                  <svg class="icon-multi-arrows">
+                    <use href="./sprites/sprite.svg#icon-multi-arrows"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="slider-games__wrapper">
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { })
               </div>
             </div>
-            <div class="games__group group-games">
-              <div class="group-games__slider slider-games">
-                <div class="group-games__header">
-                  <p class="group-games__title">
-                    <svg class="icon-circle">
-                      <use href="./sprites/sprite.svg#icon-circle"></use>
-                    </svg>
-                    <span>ігрові шоу</span>
-                  </p>
+
+            <div class="grid-games">
+              <div class="grid-games__header games-header">
+                <div class="games-header__title">
+                  <svg class="games-header__icon icon-circle">
+                    <use href="./sprites/sprite.svg#icon-circle"></use>
+                  </svg>
+                  <span class="games-header__text">ігрові шоу</span>
                 </div>
-                <div class="group-games__container">
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                  @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
-                </div>
+                <span class="show-more" data-code="">
+                  <span>ВСІ</span>
+                  <svg class="icon-multi-arrows">
+                    <use href="./sprites/sprite.svg#icon-multi-arrows"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="grid-games__container">
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+                @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
               </div>
             </div>
           </section>
