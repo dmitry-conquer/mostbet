@@ -1,37 +1,54 @@
 .button {
-   border-radius: 50px;
-   display: flex;
-   font-size: 14px;
-   font-weight: 500;
-   max-width: max-content;
-   height: 40px;
-   align-items: center;
-   padding: 0 20px;
-   line-height: 1.2;
-   text-align: center;
-   text-transform: uppercase;
-   justify-content: center;
-   color: #fff;
-   font-size: 18px;
-   gap: 10px;
-   min-height: 40px;
-   &_primary {
-     background-image: linear-gradient(0deg, #fa4d00 0, #fa5e00);
-     box-shadow: 0 10px 30px #fa410066;
-   }
-   &_secondary {
-     background-color: #428cdc;
-     background-image: linear-gradient(0deg, #428cdc 0, #0992af);
-     box-shadow: 0 11px 27px #428cdca1;
-   }
-   &_small {
-     padding: 0 10px;
-     font-size: 14px;
-     font-weight: 600;
-   }
- }
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: max-content;
+  height: 40px;
+  align-items: center;
+  padding: 0 20px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  gap: 10px;
+  min-height: 40px;
+  transition: all 0.3s ease;
+  &:active {
+    transform: translateY(2px);
+  }
+  &_primary {
+    background-image: linear-gradient(0deg, #fa4d00 0, #fa5e00);
+    box-shadow: 0 10px 30px #fa410066;
 
+    @media (any-hover: hover) {
+      &:hover {
+        background-image: linear-gradient(0deg, #d35823 0, #ff8132);
+        box-shadow: 0 10px 40px #fa4b008e;
+      }
+    }
+  }
+  &_secondary {
+    background-color: #428cdc;
+    background-image: linear-gradient(0deg, #428cdc 0, #0992af);
+    box-shadow: 0 11px 27px #428cdca1;
 
+    @media (any-hover: hover) {
+      &:hover {
+        background-image: linear-gradient(0deg, #4f9aeb 0, #68d1e6);
+        box-shadow: 0 10px 40px #428cdc8f;
+      }
+    }
+  }
+  &_small {
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
 
 .slider-button {
   width: 40px;
@@ -56,14 +73,13 @@
   }
 }
 
-
 .icon-link {
   cursor: pointer;
   fill: #1183d3;
-    transition: opacity .3s ease;
-    @media (any-hover: hover) {
-      &:hover {
-        opacity: 0.5;
-      }
+  transition: opacity 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.5;
     }
+  }
 }
