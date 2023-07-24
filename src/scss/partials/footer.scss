@@ -1,0 +1,111 @@
+/*
+  footer
+*/
+
+.footer {
+   margin-left: 280px;
+   background: #003266;
+   border-top-left-radius: 15px;
+   padding: 20px 20px 40px 20px;
+   @media (max-width: ($md)) {
+     border-radius: 15px;
+     margin: 0 15px 15px 15px;
+   }
+   &_single {
+    border-radius: 15px;
+    margin: 0 15px 15px;
+   }
+   &__top {
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     gap: 20px 40px;
+     @media (max-width: ($sm)) {
+       justify-content: center;
+     }
+   }
+   &__age-limit {
+     align-items: center;
+     border: 2px solid #09437f;
+     border-radius: 50%;
+     color: #1183d3;
+     display: flex;
+     font-weight: 600;
+     height: 40px;
+     justify-content: center;
+     width: 40px;
+   }
+   &__nav {
+     margin-bottom: 25px;
+   }
+   &__list {
+     display: flex;
+     justify-content: center;
+     gap: 30px;
+     flex-wrap: wrap;
+   }
+   &__item {
+   }
+   &__link {
+     cursor: pointer;
+     align-items: center;
+     color: #1183d3;
+     display: flex;
+     font-size: 16px;
+     font-weight: 600;
+     text-align: center;
+     text-transform: uppercase;
+     transition: color 0.3s ease;
+     @media (any-hover: hover) {
+       &:hover {
+         color: #4294cf;
+       }
+     }
+   }
+   &__bottom {
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     @media (max-width: ($lg-md)) {
+       flex-direction: column;
+       gap: 15px 0;
+       align-items: start;
+     }
+     @media (max-width: ($sm)) {
+       align-items: center;
+     }
+   }
+   &__column {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 30px;
+     padding: 10px;
+     background-color: #04386e;
+     border-radius: 16px;
+     padding: 15px 20px;
+     flex-wrap: wrap;
+     &_providers {
+       flex: 1 1 auto;
+     }
+     @media (max-width: ($md)) {
+       gap: 15px;
+       justify-content: center;
+     }
+   }
+   &__label {
+     color: #fff;
+     font-weight: 500;
+     padding: 10px 5px;
+     text-transform: uppercase;
+   }
+   &__provider {
+     height: 27px;
+     @media (max-width: ($md)) {
+       height: 20px;
+     }
+   }
+ }
+ 
