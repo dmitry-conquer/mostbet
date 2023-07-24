@@ -639,15 +639,19 @@ svg {
   border-top-left-radius: 15px;
   padding: 20px 20px 40px 20px;
   @media (max-width: ($md)) {
-    margin-left: 15px;
-    margin-right: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 15px;
+    margin: 0 15px 15px 15px;
   }
   &__top {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    @media (max-width: ($sm)) {
+       justify-content: center;
+    }
   }
   &__age-limit {
     align-items: center;
@@ -667,6 +671,7 @@ svg {
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
   }
   &__item {
   }
@@ -677,6 +682,7 @@ svg {
     display: flex;
     font-size: 16px;
     font-weight: 600;
+    text-align: center;
     text-transform: uppercase;
     transition: color 0.3s ease;
     @media (any-hover: hover) {
@@ -689,9 +695,16 @@ svg {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    @media (max-width: ($lg-md)) {
+      flex-direction: column;
+      gap: 15px 0;
+      align-items: start;
+   }
+   @media (max-width: ($sm)) {
+    align-items: center;
+   }
   }
   &__column {
-    height: 63px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -699,9 +712,14 @@ svg {
     padding: 10px;
     background-color: #04386e;
     border-radius: 16px;
-    padding: 0 20px;
+    padding: 15px 20px;
+    flex-wrap: wrap;
     &_providers {
       flex: 1 1 auto;
+    }
+    @media (max-width: ($md)) {
+      gap: 15px;
+      justify-content: center;
     }
   }
   &__label {
@@ -712,5 +730,8 @@ svg {
   }
   &__provider {
     height: 27px;
+    @media (max-width: ($md)) {
+       height: 20px;
+    }
   }
 }
