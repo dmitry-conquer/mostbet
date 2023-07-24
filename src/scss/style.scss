@@ -25,12 +25,18 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 .main {
   padding-top: 110px;
   @media (max-width: ($lg-md)) {
     padding-top: 70px;
+  }
+  @media (max-width: ($sm)) {
+    padding-top: 43px;
   }
 }
 
@@ -39,6 +45,9 @@ body {
   padding-right: 15px;
   padding-left: 280px;
   max-width: 100%;
+  @media (max-width: ($md)) {
+    padding-left: 15px;
+  }
 }
 
 ._imw {
@@ -94,6 +103,9 @@ svg {
   @media (max-width: ($lg-md)) {
     min-height: 90px;
   }
+  @media (max-width: ($sm)) {
+    min-height: 60px;
+  }
   padding: 15px 20px;
   &__top {
     display: flex;
@@ -110,10 +122,15 @@ svg {
   &__auth {
     display: flex;
     gap: 10px 20px;
-    @media (max-width: ($lg-md)) {
+    @media (max-width: ($lg)) {
+      margin-left: auto;
+    }
+    @media (max-width: ($sm)) {
+      margin: 0;
+    }
+    @media (max-width: ($sm2)) {
       flex-direction: column;
       align-items: center;
-      margin-top: 20px;
     }
   }
   &__bottom {
@@ -122,25 +139,42 @@ svg {
     gap: 25px;
   }
   &__logo {
+    @media (max-width: ($sm)) {
+      margin-right: auto;
+    }
+    @media (max-width: ($sm2)) {
+      max-width: 200px;
+    }
   }
   &__logo-full {
+    width: 100%;
     display: block;
-    @media (max-width: ($lg-md)) {
+    @media (max-width: $lg-md), (max-width: $sm) {
       display: none;
+    }
+
+    @media (max-width: $lg), (max-width: $sm2) {
+      display: block;
     }
   }
   &__logo-only {
     display: none;
-    @media (max-width: ($lg-md)) {
+    @media (max-width: $lg-md), (max-width: $sm) {
       display: block;
+    }
+    @media (max-width: $lg), (max-width: $sm2) {
+      display: none;
     }
   }
 
   &__menu-icon {
     display: none;
-    margin-left: auto;
+    // margin-left: auto;
     @media (max-width: ($lg)) {
       display: block;
+    }
+    @media (max-width: ($sm2)) {
+      margin-left: auto;
     }
     svg {
       width: 30px;
@@ -155,25 +189,32 @@ svg {
   &__left {
     display: flex;
     gap: 20px;
-    @media (max-width: ($md)) {
+
+    @media (max-width: ($lg-md)) {
       margin-top: 20px;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 2px;
     }
   }
   &__items {
     display: flex;
     gap: 2px;
+    @media (max-width: ($md)) {
+      flex-direction: column;
+    }
   }
   &__item {
     align-items: center;
     background-color: #054588;
     border-radius: 20px;
     display: flex;
+    justify-content: center;
+    white-space: nowrap;
     padding: 0 10px;
     height: 40px;
     gap: 10px;
+    width: 100%;
     color: #fff;
     font-size: 14px;
     @media (max-width: ($md)) {
@@ -183,14 +224,26 @@ svg {
     &_left {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      @media (max-width: ($md)) {
+        border-radius: 20px;
+      }
     }
     &_center {
       border-radius: 0;
+      @media (max-width: ($md)) {
+        border-radius: 20px;
+      }
     }
     &_right {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      @media (max-width: ($md)) {
+        border-radius: 20px;
+      }
     }
+  }
+  &__sale {
+    margin: 0 auto;
   }
   &__label {
     text-transform: uppercase;
@@ -212,7 +265,9 @@ svg {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
     &._active {
       opacity: 1;
       visibility: visible;
@@ -225,6 +280,8 @@ svg {
     height: 100vh;
     top: 0;
     right: 0;
+    border-radius: 0;
+
   }
   &__close {
     position: absolute;
@@ -288,16 +345,39 @@ svg {
 
 .sidebar {
   position: fixed;
+  left: 0;
   z-index: 99;
   height: 100%;
   padding: 20px 20px 0 20px;
   width: 280px;
-  overflow-y: auto;
+  transition: all 0.3s ease;
   @include scroll('#263c58d2');
-
+  @media (max-width: ($md)) {
+    top: 90px;
+    left: -30px;
+    opacity: 0;
+    visibility: hidden;
+    &._active {
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+    }
+  }
+  &__close {
+    @media (min-width: ($md)) {
+      display: none;
+    }
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    .icon-cross {
+      fill: #fff;
+      width: 27px;
+      height: 27px;
+    }
+  }
   &__inner {
     overflow-y: auto;
-    // padding: 15px 0;
     padding-bottom: 130px;
     height: 100%;
   }
@@ -462,6 +542,7 @@ svg {
 .slider-hero {
   width: 100%;
   padding: 20px 0;
+  margin-bottom: 30px;
   @media (max-width: ($lg)) {
     height: 300px;
   }
@@ -557,6 +638,11 @@ svg {
   background: #003266;
   border-top-left-radius: 15px;
   padding: 20px 20px 40px 20px;
+  @media (max-width: ($md)) {
+    margin-left: 15px;
+    margin-right: 15px;
+    border-top-right-radius: 15px;
+  }
   &__top {
     margin-bottom: 20px;
     display: flex;

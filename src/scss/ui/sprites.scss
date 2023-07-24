@@ -7,13 +7,19 @@
 .icon-present {
   fill: #fff;
 }
-.icon-sort {
+.icon-sort,
+.icon-sort-bar {
   width: 27px;
   height: 27px;
 }
+.icon-sort-bar {
+  fill: #428cdc;
+  width: 27px;
+  height: 27px;
+}
+
 .icon-simple-arrow {
   fill: #fff;
   width: 10px;
   height: 10px;
 }
-
