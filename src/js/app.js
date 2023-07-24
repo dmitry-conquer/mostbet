@@ -42,15 +42,15 @@ function app() {
     sidebar
   */
 
-  const sidebarOpenButton = document.querySelector('.sort__open-bar');
-  const sidebarCloseButton = document.querySelector('.sidebar__close');
-  const sidebar = document.querySelector('.sidebar');
-  sidebarOpenButton.addEventListener('click', () => {
-    sidebar.classList.toggle('_active');
-  });
-  sidebarCloseButton.addEventListener('click', () => {
-    sidebar.classList.remove('_active');
-  });
+  // const sidebarOpenButton = document.querySelector('.sort__open-bar');
+  // const sidebarCloseButton = document.querySelector('.sidebar__close');
+  // const sidebar = document.querySelector('.sidebar');
+  // sidebarOpenButton.addEventListener('click', () => {
+  //   sidebar.classList.toggle('_active');
+  // });
+  // sidebarCloseButton.addEventListener('click', () => {
+  //   sidebar.classList.remove('_active');
+  // });
 }
 
 document.addEventListener('DOMContentLoaded', app);

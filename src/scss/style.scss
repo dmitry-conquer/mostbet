@@ -16,6 +16,7 @@
         "./ui/buttons",
         "./ui/games-item",
         "./ui/sort",
+        "./ui/slider-hero",
         "./ui/sprites";
 /* prettier-ignore */
 @import "fonts",
@@ -144,7 +145,6 @@ svg {
       margin-right: auto;
       min-width: auto;
     }
-  
   }
   &__logo-full {
     width: 100%;
@@ -351,29 +351,9 @@ svg {
   transition: all 0.3s ease;
   @include scroll('#263c58d2');
   @media (max-width: ($md)) {
-    top: 90px;
-    left: -30px;
-    opacity: 0;
-    visibility: hidden;
-    &._active {
-      opacity: 1;
-      visibility: visible;
-      left: 0;
-    }
+    display: none;
   }
-  &__close {
-    @media (min-width: ($md)) {
-      display: none;
-    }
-    position: absolute;
-    right: -15px;
-    top: 5px;
-    .icon-cross {
-      fill: #fff;
-      width: 27px;
-      height: 27px;
-    }
-  }
+
   &__inner {
     overflow-y: auto;
     padding-bottom: 130px;
@@ -385,33 +365,42 @@ svg {
     margin-bottom: 10px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-
     background-image: linear-gradient(180deg, #003266 90%, #00326600);
   }
   &__list {
     border-radius: 15px;
     margin-bottom: 10px;
+    @media (max-width: ($md)) {
+      display: flex;
+    }
     &_bottom {
-      background: #fff;
-      .sidebar__link {
-        border-bottom: 2px solid #e8ecf1;
-
-        span {
-          color: #000;
-        }
-        svg {
-          fill: #9ea7b2;
+      @media (min-width: ($md)) {
+        background: #fff;
+        .sidebar__link {
+          border-bottom: 2px solid #e8ecf1;
+          span {
+            color: #000;
+          }
+          svg {
+            fill: #9ea7b2;
+          }
         }
       }
     }
   }
   &__link {
     cursor: pointer;
-    border-bottom: 2px solid #043e7d;
+    @media (min-width: ($md)) {
+      border-bottom: 2px solid #043e7d;
+    }
     padding: 0 15px;
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 0 7px;
+    @media (max-width: ($md)) {
+      flex-direction: column;
+      align-items: center;
+    }
     svg {
       fill: #1183d3;
       width: 40px;
@@ -441,9 +430,17 @@ svg {
     }
   }
 }
+
+.sidebar-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  overflow-x: auto;
+}
 .sidebar-search {
   height: 40px;
   padding: 0 15px;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -455,6 +452,10 @@ svg {
     width: 100%;
     height: 100%;
     padding: 0 10px;
+    transition: all 0.3s ease;
+    &:focus-within {
+      border: 2px solid #1181d0;
+    }
     svg {
       fill: #1181d0;
     }
@@ -464,6 +465,11 @@ svg {
   &__input {
     width: 100%;
     background: transparent;
+    color: #fff;
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
     &::placeholder {
       text-transform: uppercase;
       color: #1181d0;
@@ -483,6 +489,9 @@ svg {
   margin-top: 12px;
   padding-top: 20px;
   position: relative;
+  @media (max-width: ($md)) {
+    display: none;
+  }
   &__inner {
     background-image: url('https://front.cdn-mb.com/spa-static/1.4.1216/static/media/double_lines.67368afa1f6aa9d0c695.svg');
     background-position: 50% 0;
@@ -525,61 +534,6 @@ svg {
   }
   &__button {
     margin: 0 auto;
-  }
-}
-
-/*
-  hero
-*/
-
-.hero {
-  // padding-left: 280px;
-  &__slider {
-  }
-}
-.slider-hero {
-  width: 100%;
-  padding: 20px 0;
-  margin-bottom: 30px;
-  @media (min-width: ($sm)) {
-    height: 300px;
-  }
-  @media (min-width: ($lg)) {
-    height: auto;
-  }
- 
-  @include av('height', 300, 200, 629.98, 320);
-  
-  &__wrapper {
-    display: flex;
-    height: 100%;
-  }
-  &__pagination {
-    display: flex;
-    justify-content: center;
-    .swiper-pagination-bullet {
-      width: 14px;
-      height: 14px;
-      @media (max-width: ($md)) {
-        width: 10px;
-        height: 10px;
-      }
-      border: 2px solid #428cdc;
-      background: transparent;
-      transition: all 0.3s ease;
-      &.swiper-pagination-bullet-active {
-        background-color: #fff;
-        border: 2px solid transparent;
-      }
-    }
-  }
-}
-
-.slide-hero {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  &__image {
   }
 }
 

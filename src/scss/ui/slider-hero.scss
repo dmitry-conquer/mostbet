@@ -1,0 +1,49 @@
+/*
+  hero
+*/
+
+.slider-hero {
+   width: 100%;
+   padding: 20px 0;
+   margin-bottom: 30px;
+   @media (min-width: ($sm)) {
+     height: 300px;
+   }
+   @media (min-width: ($lg)) {
+     height: auto;
+   }
+ 
+   @include av('height', 300, 200, 629.98, 320);
+ 
+   &__wrapper {
+     display: flex;
+     height: 100%;
+   }
+   &__pagination {
+     display: flex;
+     justify-content: center;
+     .swiper-pagination-bullet {
+       width: 14px;
+       height: 14px;
+       @media (max-width: ($md)) {
+         width: 10px;
+         height: 10px;
+       }
+       border: 2px solid #428cdc;
+       background: transparent;
+       transition: all 0.3s ease;
+       &.swiper-pagination-bullet-active {
+         background-color: #fff;
+         border: 2px solid transparent;
+       }
+     }
+   }
+ }
+ 
+ .slide-hero {
+   width: 100%;
+   height: 100%;
+   flex-shrink: 0;
+   &__image {
+   }
+ }

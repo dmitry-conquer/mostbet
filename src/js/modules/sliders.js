@@ -20,39 +20,42 @@ export function initSliders() {
     });
   }
 
+  const gamesSliders = document.querySelectorAll('.slider-games');
   if (document.querySelector('.slider-games')) {
-    new Swiper('.slider-games', {
-      modules: [Navigation],
-      wrapperClass: 'slider-games__wrapper',
-      slideClass: 'slider-games__slide',
-      slidesPerView: 1.3,
-      spaceBetween: 20,
-      speed: 1200,
-      // loop: true,
-      navigation: {
-        prevEl: '.slider-button_prev',
-        nextEl: '.slider-button_next',
-      },
-      breakpoints: {
-        420: {
-          slidesPerView: 2,
+    gamesSliders.forEach(slider => {
+      new Swiper(slider, {
+        modules: [Navigation],
+        wrapperClass: 'slider-games__wrapper',
+        slideClass: 'slider-games__slide',
+        slidesPerView: 1.3,
+        spaceBetween: 20,
+        speed: 1200,
+        // loop: true,
+        navigation: {
+          prevEl: slider.querySelector('.slider-button_prev'),
+          nextEl: slider.querySelector('.slider-button_next'),
         },
-        768: {
-          slidesPerView: 2.8,
+        breakpoints: {
+          420: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2.8,
+          },
+          876: {
+            slidesPerView: 3,
+          },
+          1100: {
+            slidesPerView: 4,
+          },
+          1350: {
+            slidesPerView: 5,
+          },
+          1530: {
+            slidesPerView: 6,
+          },
         },
-        876: {
-          slidesPerView: 3,
-        },
-        1100: {
-          slidesPerView: 4,
-        },
-        1350: {
-          slidesPerView: 5,
-        },
-        1530: {
-          slidesPerView: 6,
-        },
-      },
+      });
     });
   }
 }
