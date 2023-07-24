@@ -2,14 +2,39 @@
   position: relative;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 20px 40px;
-  padding-bottom: 25px;
+  padding: 15px 0;
   margin-bottom: 25px;
   border-bottom: 2px solid #003266;
-  &__open-bar {
-    @media (min-width: ($md)) {
-      display: none;
+  @media (max-width: ($md)) {
+    background-color: #003266;
+    margin: 0 -15px;
+    padding: 7px 15px;
+  }
+
+  @media (max-width: ($md)) {
+    gap: 20px;
+  }
+  &__container {
+    display: flex;
+    gap: 15px 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    @media (max-width: ($md)) {
+      position: absolute;
+      z-index: 5;
+      background: #043e7d;
+      padding: 10px;
+      border-radius: 10px;
+      top: 100%;
+      left: 0px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      &._active-spoiler-content {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
   &__caption {
@@ -19,14 +44,26 @@
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
-    &_popular {
+    &_type {
       color: #428cdc;
+      @media (max-width: ($md)) {
+        display: none;
+      }
     }
   }
   &__base {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 15px;
+    .icon-sort {
+      fill: #003266;
+    }
+    @media (max-width: ($md)) {
+      .icon-sort {
+        fill: #428cdc;
+      }
+    }
   }
   &__select {
   }
@@ -44,7 +81,7 @@
     svg {
       transition: all 0.3s ease;
     }
-    &._active {
+    &._active-spoiler {
       svg {
         transform: rotate(-180deg);
       }
@@ -61,7 +98,6 @@
     visibility: hidden;
     background: #043e7d;
     border-radius: 13px;
-    box-shadow: 0 10px var(--app-base-spacing) #00060da1;
     max-width: 1040px;
     overflow: hidden;
     top: calc(100% - 10px);
@@ -69,7 +105,7 @@
     width: 100%;
     z-index: 3;
     color: #fff;
-    &._visible {
+    &._active-spoiler-content {
       opacity: 1;
       visibility: visible;
     }
@@ -79,12 +115,6 @@
     grid-template-columns: repeat(5, 20%);
     gap: 15px 0;
     @media (max-width: ($lg)) {
-      grid-template-columns: repeat(4, 25%);
-    }
-    @media (max-width: ($sm)) {
-      grid-template-columns: repeat(3, 33.333%);
-    }
-    @media (max-width: ($sm2)) {
       grid-template-columns: repeat(2, 50%);
     }
   }

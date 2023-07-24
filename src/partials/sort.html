@@ -1,145 +1,283 @@
 <div class="sort">
-  <div class="sort__base">
+  <div class="sort__base" data-spoiler>
     <span>
       <svg class="icon-sort">
         <use href="./sprites/sprite.svg#icon-sort"></use>
       </svg>
     </span>
-    <span class="sort__caption sort__caption_popular">популярні:</span>
+    <span class="sort__caption sort__caption_type">популярні:</span>
   </div>
-  <div class="sort__base">
-    <span class="sort__caption">провайдер</span>
-    <div class="sort__select">
-      <button type=" button" class="sort__trigger">
-        <span>2</span>
-        <svg class="icon-simple-arrow">
-          <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
-        </svg>
-      </button>
-      <div class="sort__drop-down">
-        <ul class="sort__list">
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">7MOJOS</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">BeterLive</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">Evolution Gaming</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">Sportgames</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">BeterLive</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">7MOJOS</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">BeterLive</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">Evolution Gaming</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">Sportgames</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">BeterLive</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">7MOJOS</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">BeterLive</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">Evolution Gaming</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">Sportgames</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">BeterLive</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">7MOJOS</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">BeterLive</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">Evolution Gaming</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">Sportgames</span>
-            </label>
-          </li>
-          <li class="sort__item item-sort">
-            <label class="item-sort__label">
-              <input class="visually-hidden" type="checkbox" />
-              <span class="item-sort__text">BeterLive</span>
-            </label>
-          </li>
-        </ul>
+  <div class="sort__container">
+    <div class="sort__base">
+      <span class="sort__caption">провайдер</span>
+      <div class="sort__select">
+        <button type=" button" class="sort__trigger" data-spoiler>
+          <span>2</span>
+          <svg class="icon-simple-arrow">
+            <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+          </svg>
+        </button>
+        <div class="sort__drop-down">
+          <ul class="sort__list">
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">7MOJOS</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Evolution Gaming</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Sportgames</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">7MOJOS</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Evolution Gaming</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Sportgames</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">7MOJOS</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Evolution Gaming</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Sportgames</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">7MOJOS</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Evolution Gaming</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Sportgames</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="sort__base">
+      <span class="sort__caption">провайдер</span>
+      <div class="sort__select">
+        <button type=" button" class="sort__trigger" data-spoiler>
+          <span>2</span>
+          <svg class="icon-simple-arrow">
+            <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+          </svg>
+        </button>
+        <div class="sort__drop-down">
+          <ul class="sort__list">
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">7MOJOS</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Evolution Gaming</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Sportgames</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">7MOJOS</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Evolution Gaming</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Sportgames</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">7MOJOS</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Evolution Gaming</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Sportgames</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">7MOJOS</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Evolution Gaming</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">Sportgames</span>
+              </label>
+            </li>
+            <li class="sort__item item-sort">
+              <label class="item-sort__label">
+                <input class="visually-hidden" type="checkbox" />
+                <span class="item-sort__text">BeterLive</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

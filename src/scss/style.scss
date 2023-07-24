@@ -148,14 +148,19 @@ svg {
 }
 
 .sidebar-row {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
   overflow-x: auto;
+  display: flex;
+  justify-content: start;
 }
 .sidebar-search {
   height: 40px;
   padding: 0 15px;
+  @media (max-width: ($md)) {
+    margin-left: auto;
+  }
+  @media (max-width: ($sm2)) {
+     margin: 0;
+  }
   &__inner {
     display: flex;
     align-items: center;
@@ -253,13 +258,22 @@ svg {
 }
 
 .sidebar-item {
-  &_muted {
-    border: 2px solid #fff;
-    background: #e8ecf1;
-  }
   width: 100%;
-  &:not(:last-child) {
-    border-bottom: 2px solid #043e7d;
+  &_muted {
+    @media (min-width: ($md)) {
+      border: 2px solid #fff;
+      background: #e8ecf1;
+    }
+  }
+  @media (min-width: ($md)) {
+    &:not(:last-child) {
+      border-bottom: 2px solid #043e7d;
+    }
+  }
+  @media (max-width: ($md)) {
+    border-right: 1px solid #1d4a79a4;
+    border-left: 1px solid #1d4a79a4;
+    border-collapse: collapse;
   }
   &__link {
     cursor: pointer;
@@ -276,12 +290,16 @@ svg {
   &__icon {
     width: 40px;
     height: 40px;
+    fill: #1183d3;
   }
   &__text {
     color: #000;
     font-size: 16px;
     font-weight: 500;
     line-height: 60px;
+    @media (max-width: ($md)) {
+      line-height: 45px;
+    }
     max-width: 160px;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -8,7 +8,6 @@ function app() {
   useDynamicAdapt('max');
   useSliders();
   useSpoiler();
-  sorting();
 
   /*
     header
