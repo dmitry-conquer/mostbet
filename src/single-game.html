@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('partials/head.html', { 'title': 'Single game' })
+  <body>
+    <div class="wrapper">
+      @@include('partials/header.html', { })
+      <main class="main">
+        <div class="container">
+          <div class="single-game">
+            <img src="./img/single-game-bg.webp" alt="bg image game" class="single-game__gb" />
+            <div class="single-game__content">
+              <img src="./img/single-game-preview.webp" alt="game preview" class="single-game__preview" />
+              <div class="single-game__buttons">
+                <span class="single-game__button button button_primary" data-code="">Демо</span>
+                <span class="single-game__button button button_secondary" data-code="">Играть</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-single">
+            <div class="games-header">
+              <p class="games-header__title">
+                <span class="games-header__text">Схожі ігри</span>
+              </p>
+              <div class="games-header__nav">
+                <button class="slider-button slider-button_prev" type="button" aria-label="попередній слайд">
+                  <svg class="icon-simple-arrow">
+                    <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                  </svg>
+                </button>
+                <button class="slider-button slider-button_next" type="button" aria-label="наступний слайд">
+                  <svg class="icon-simple-arrow">
+                    <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <span class="show-more" data-code="">
+                <span>ВСІ</span>
+                <svg class="icon-multi-arrows">
+                  <use href="./sprites/sprite.svg#icon-multi-arrows"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="slider-single__wrapper">
+              @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+              @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+              @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+              @@include('partials/game-item.html', { }) @@include('partials/game-item.html', { })
+              @@include('partials/game-item.html', { })
+            </div>
+          </div>
+        </div>
+      </main>
+      @@include('partials/footer-full.html', { })
+    </div>
+    <script type="module" src="./js/app.min.js"></script>
+  </body>
+</html>

@@ -59,7 +59,6 @@ export function useSliders() {
     });
   }
 
-
   const cardsSliders = document.querySelectorAll('.slider-card');
   if (document.querySelector('.slider-card')) {
     cardsSliders.forEach(slider => {
@@ -89,7 +88,6 @@ export function useSliders() {
       });
     });
   }
-
 
   const groupSliders = document.querySelectorAll('.slider-group');
   if (document.querySelector('.slider-group')) {
@@ -127,6 +125,36 @@ export function useSliders() {
           },
         },
       });
+    });
+  }
+
+  if (document.querySelector('.slider-single')) {
+    new Swiper('.slider-single', {
+      modules: [Navigation],
+      wrapperClass: 'slider-single__wrapper',
+      slideClass: 'slider-games__slide',
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+      speed: 1200,
+      // loop: true,
+      navigation: {
+        prevEl: '.slider-button_prev',
+        nextEl: '.slider-button_next',
+      },
+      breakpoints: {
+        420: {
+          slidesPerView: 2,
+        },
+        630: {
+          slidesPerView: 3,
+        },
+        1115: {
+          slidesPerView: 4,
+        },
+        1320: {
+          slidesPerView: 5,
+        },
+      },
     });
   }
 }

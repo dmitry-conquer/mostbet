@@ -171,8 +171,8 @@
   position: relative;
   @media (max-width: ($lg)) {
     position: fixed;
-    top: 50px;
-    right: 10px;
+    top: 0;
+    right: 0;
     background-color: #003266;
     width: 320px;
     padding: 25px;

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('partials/head.html', { 'title': 'Новини' })
+  <body>
+    <div class="wrapper">
+      @@include('partials/header.html', { })
+      <main class="main">
+        <div class="container container_default">
+          <section class="news">
+            @@include('partials/news-card.html', { 'src': 'src="./img/news1.webp"' })
+            @@include('partials/news-card.html', { 'src': 'src="./img/news2.webp"' })
+            @@include('partials/news-card.html', { 'src': 'src="./img/news1.webp"' })
+          </section>
+        </div>
+      </main>
+      @@include('partials/footer-full.html', { })
+    </div>
+    <script type="module" src="./js/app.min.js"></script>
+  </body>
+</html>
