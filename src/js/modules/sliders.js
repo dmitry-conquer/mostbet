@@ -151,9 +151,6 @@ export function useSliders() {
         1115: {
           slidesPerView: 4,
         },
-        1320: {
-          slidesPerView: 5,
-        },
       },
     });
   }

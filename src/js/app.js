@@ -1,6 +1,6 @@
+import { useDynamicAdapt } from './modules/dynamicAdapt.js';
 import { useSpoiler } from './modules/spoilers.js';
 import { useSliders } from './modules/sliders.js';
-import { useDynamicAdapt } from './modules/dynamicAdapt.js';
 
 function app() {
   useDynamicAdapt('max');
